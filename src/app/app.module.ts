@@ -4,7 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+//import { AngularFireMessagingModule } from '@angular/fire/messaging';
+//import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { HomeComponent } from './home/home.component';
+//import { environment } from 'src/environments/environment';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCWmphhcv1ZTOvgTAHh0A6dz5QCqMRk37o",
@@ -25,8 +30,12 @@ var firebaseConfig = {
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule
-  ],
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    //AngularFireMessagingModule
+    //AngularFireDatabaseModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
