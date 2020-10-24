@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { HomeComponent } from './home/home.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCWmphhcv1ZTOvgTAHh0A6dz5QCqMRk37o",
@@ -18,7 +19,8 @@ var firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
